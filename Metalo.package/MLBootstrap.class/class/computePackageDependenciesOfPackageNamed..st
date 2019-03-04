@@ -1,16 +1,15 @@
 dependencies computing
 computePackageDependenciesOfPackageNamed: aPackageName
-	| dict  dependentClasses |
-
+	| dict dependentClasses |
 	dict := Dictionary new.
-	dependentClasses := [ 
-		(((DAPackageRelationGraph onPackagesNamed: {aPackageName})
+	dependentClasses := [ ((DAPackageRelationGraph
+		onPackagesNamed: {aPackageName})
 		computeStaticDependencies;
-		classToPackage) keys
-		collect: [ :aClass | aClass theNonMetaClass name ])
-		 ] on: PotentialOutDatedDependencyWarning do: [ :w | w resume  ].
-	
-	dependentClasses do: [ :dependantName | 
+		classToPackage) keys collect: [ :aClass | aClass instanceSide name ] ]
+		on: PotentialOutDatedDependencyWarning
+		do: [ :w | w resume ].
+	dependentClasses
+		do: [ :dependantName | 
 			| class |
 			class := Smalltalk globals at: dependantName asSymbol.
 			class isTrait
@@ -27,7 +26,7 @@ computePackageDependenciesOfPackageNamed: aPackageName
 				package name.
 			(dict at: globalPackageOwner ifAbsentPut: [ OrderedCollection new ])
 				add: globalName ].
-	dict removeKey: aPackageName ifAbsent: [].
+	dict removeKey: aPackageName ifAbsent: [  ].
 	dict := dict associations
 		collect: [ :assoc | assoc key -> assoc value asArray ].
-	^ dict asDictionary 
+	^ dict asDictionary

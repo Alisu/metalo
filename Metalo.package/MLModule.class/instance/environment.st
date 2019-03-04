@@ -1,4 +1,4 @@
 accessing
 environment
 	
-	^ classBindings
+	^ (classBindings associations, undeclaredBindings associations , importsEnvironment associations) asDictionary

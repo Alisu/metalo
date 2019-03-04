@@ -1,5 +1,5 @@
 running
 tearDown
-	UndefinedClass privateCleanupSubclasses.
+	"UndefinedClass privateCleanupSubclasses."
 	super tearDown
 	

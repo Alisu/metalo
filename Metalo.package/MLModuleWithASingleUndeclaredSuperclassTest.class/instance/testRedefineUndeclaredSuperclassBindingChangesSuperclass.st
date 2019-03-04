@@ -1,6 +1,6 @@
 test-undeclareds
 testRedefineUndeclaredSuperclassBindingChangesSuperclass
-
+1halt.
 	"We create a class #Object.
 	Creating a class defines the name #Object in the module.
 	This overrides the undeclared"

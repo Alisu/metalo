@@ -1,4 +1,4 @@
 installing
-installClass: aClass withName: aString 
-	
+installClass: aClass withName: aString
+
 	environment at: aString put: aClass

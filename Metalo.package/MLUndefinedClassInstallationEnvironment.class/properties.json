@@ -5,9 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"environment"
-	],
-	"name" : "MLInstallingEnvironment",
+	"instvars" : [ ],
+	"name" : "MLUndefinedClassInstallationEnvironment",
 	"type" : "normal"
 }

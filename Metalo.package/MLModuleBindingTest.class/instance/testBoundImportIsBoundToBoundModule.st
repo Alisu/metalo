@@ -1,7 +1,7 @@
 tests
 testBoundImportIsBoundToBoundModule
+| importee importer import |
 
-	| importee importer import |
 	importee := MLModule newNamed: #SomeContainerModule.
 	importee declareVariableNamed: #SomeName.
 

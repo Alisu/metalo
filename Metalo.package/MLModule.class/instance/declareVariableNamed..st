@@ -1,4 +1,4 @@
-delcarations
+declarations
 declareVariableNamed: aString 
 	
 	| binding |

@@ -3,8 +3,8 @@ testDefineUndefinedClassReplacesOldClass
 
 	module declareClassNamed: #Object subclassOfClassNamed: #DoNotKnowThisClass.
 	
-	self assert: (module classNamed: #Object) isUndefinedSubclass.
+	self assert: (module classNamed: #Object) isUndefined.
 	
 	module declareClassNamed: #DoNotKnowThisClass.
 	
-	self deny: (module classNamed: #Object) isUndefinedSubclass.
+	self deny: (module classNamed: #Object) isUndefined.
