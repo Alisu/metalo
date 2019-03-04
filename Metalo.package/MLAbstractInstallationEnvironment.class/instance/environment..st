@@ -1,3 +1,3 @@
 accessing
 environment: aCollection 
-	environment := aCollection
+	module := aCollection

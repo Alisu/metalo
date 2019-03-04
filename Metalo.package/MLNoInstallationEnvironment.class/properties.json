@@ -1,6 +1,6 @@
 {
 	"commentStamp" : "",
-	"super" : "MLDefinedClassInstallationEnvironment",
+	"super" : "MLAbstractInstallationEnvironment",
 	"category" : "Metalo-Compilation",
 	"classinstvars" : [ ],
 	"pools" : [ ],
