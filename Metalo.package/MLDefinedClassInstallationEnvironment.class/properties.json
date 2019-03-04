@@ -8,6 +8,6 @@
 	"instvars" : [
 		"environment"
 	],
-	"name" : "MLDefinedClassEnvironment",
+	"name" : "MLDefinedClassInstallationEnvironment",
 	"type" : "normal"
 }

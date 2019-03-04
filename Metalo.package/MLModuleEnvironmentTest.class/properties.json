@@ -9,6 +9,6 @@
 		"moduleToTest",
 		"moduleImportFrom"
 	],
-	"name" : "MLModuleEnvinronmentTest",
+	"name" : "MLModuleEnvironmentTest",
 	"type" : "normal"
 }
