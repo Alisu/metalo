@@ -1,12 +1,9 @@
 class creation
 basicCreateUndefinedClassNamed: aClassName inEnvironment: anInstallingEnvironment
-	
+	| res |
+	res := CDClassDefinitionParser
+		parse: 'nil subclass: ' , aClassName.
 	^ self
-		basicCreateClass: (MCClassDefinition
-			name: aClassName
-			superclassName: nil
-			category: 'no category'
-			instVarNames: #( )
-			comment: 'no comments')
+		basicCreateClass: res
 		superclass: UndefinedClass
 		inEnvironment: anInstallingEnvironment

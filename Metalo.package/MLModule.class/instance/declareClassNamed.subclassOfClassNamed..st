@@ -1,10 +1,11 @@
 class creation
 declareClassNamed: aClassName subclassOfClassNamed: aSuperclassName
-	
-	
-	^ self declareClass: (MCClassDefinition
-			name: aClassName
-			superclassName: aSuperclassName
-			category: 'no category'
-			instVarNames: #( )
-			comment: 'no comments').
+	| res |
+	aSuperclassName isNil
+		ifTrue: [ res := CDClassDefinitionParser
+				parse: '' , Object name , ' subclass: ' , aClassName.
+			res superclassName: #nil.
+			res superclassNameNode: aSuperclassName ]
+		ifFalse: [ res := CDClassDefinitionParser
+				parse: '' , aSuperclassName , ' subclass: ' , aClassName ].
+	^ self declareClass: res

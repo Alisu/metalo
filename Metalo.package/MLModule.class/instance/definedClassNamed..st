@@ -1,4 +1,4 @@
 accessing
-classNamed: aString 
+definedClassNamed: aString 
 	
 	^ classBindings at: aString ifAbsent: [ nil ]

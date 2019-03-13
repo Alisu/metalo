@@ -5,7 +5,5 @@ initialize
 	imports := Set new.
 	importsEnvironment := Dictionary new.
 	classBindings := Dictionary new.
-	"classBindings organization: SystemOrganizer new."
-	
 	variableBindings := Dictionary new.
 	undeclaredBindings := Dictionary new.

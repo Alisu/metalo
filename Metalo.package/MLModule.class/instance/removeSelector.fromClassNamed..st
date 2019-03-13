@@ -5,7 +5,7 @@ removeSelector: aSelector fromClassNamed: aClassName
 	| class method |
 	self flag: #bug.
 	
-	class := self classNamed: aClassName.
+	class := self definedClassNamed: aClassName.
 	method := class >> aSelector.
 	class removeSelectorSilently: aSelector.
 	

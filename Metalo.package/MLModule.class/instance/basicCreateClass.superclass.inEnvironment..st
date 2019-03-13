@@ -2,22 +2,15 @@ class creation
 basicCreateClass: aClassDefinition superclass: aSuperclass inEnvironment: classBuilderEnvironment
 	"Low level API.
 	Mainly used to create undefined classes"
-	
-	aClassDefinition traitComposition isEmpty ifFalse: [ Transcript crShow: 'TraitComposition missing for: ', aClassDefinition className ].
+
+	aClassDefinition traitDefinition isNil ifFalse: [ Transcript crShow: 'TraitComposition missing for: ', aClassDefinition className ].
 
 	DangerousClassNotifier disableDuring: [
 		^ MLClassInstaller new
 			installingEnvironment: classBuilderEnvironment;
 			make: [ :builder |
 				builder
-						superclass: aSuperclass;
-						name: aClassDefinition className;
-						layoutClass: (ObjectLayout layoutForType: aClassDefinition type);
-						slots: aClassDefinition instanceVariables;
-						sharedVariables: aClassDefinition classVariables;
-						sharedPools: aClassDefinition sharedPoolsString;
-						classSlots: aClassDefinition classInstanceVariables;
-						category: aClassDefinition category;
-						traitComposition: #() asTraitComposition; "Ignore the traits for now"
-						classTraitComposition: #() asTraitComposition; "Ignore the traits for now"
-						buildEnvironment: classBuilderEnvironment ] ]
+						"useUndefinedClass;"
+						buildEnvironment: classBuilderEnvironment;
+						buildFromAST: aClassDefinition;
+						superclass: aSuperclass ] ]
