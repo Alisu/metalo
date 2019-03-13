@@ -7,10 +7,11 @@ createTranscriptModule2
 
 	module declareImport: #PackageManifest from: #Kernel.
 	module declareImport: #Mutex from: #Kernel.
-	"module import: #Character from: #'Kernel'."
-	"module import: #String from: #'Collections-Sequenceable'."
+	module declareImport: #Character from: #'Kernel'.
+	module declareImport: #String from: #'Collections-Sequenceable'.
 	module declareImport: #Model from: #'System-Model'.
 	module declareImport: #Smalltalk from: #'System-Support'.
+	module declareImport: #Object from: #'Kernel'.
 
 	module declareVariableNamed: #Transcript.
 

@@ -2,7 +2,7 @@ examples
 testTranscriptModule
 
 	| aTranscript |
-	aTranscript := (module classNamed: #ThreadSafeTranscript) new.
+	aTranscript := (module definedClassNamed: #ThreadSafeTranscript) new.
 	aTranscript << 'test' << 'lala'.
 	aTranscript cr.
 	aTranscript << 'encore'.

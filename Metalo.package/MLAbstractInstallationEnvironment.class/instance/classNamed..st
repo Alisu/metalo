@@ -5,4 +5,4 @@ classNamed: aName
 	Return the existing class if any.
 	Return nil if none."
 	
-	^ module classNamed: aName
+	^ module at: aName

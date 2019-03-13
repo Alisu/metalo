@@ -6,7 +6,7 @@ testModuleBoundToSmalltalkGlobalsIsSuccessful
 	registry registerModule: (self class networkMIME createModuleBoundTo: registry).
 	testModule := self class networkTests createModuleBoundTo: registry.
 	
-	socketTest := testModule classNamed: #SocketTest.
+	socketTest := testModule definedClassNamed: #SocketTest.
 	result := socketTest run: #testClientConnect.
 	
 	self assert: result hasPassed

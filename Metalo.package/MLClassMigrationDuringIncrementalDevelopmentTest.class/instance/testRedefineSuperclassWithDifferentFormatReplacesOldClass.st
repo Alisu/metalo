@@ -1,33 +1,25 @@
 tests
 testRedefineSuperclassWithDifferentFormatReplacesOldClass
 
-	| pointClass |
-
+	| pointClass res|
+	
+	res:=(CDClassDefinitionParser parse: '',Object name,' subclass: #Point' ).
+		res superclassName:#nil.
+		res superclassNameNode:nil.
+		
 	"Create point class without instance variables"
-	module declareClass: (MCClassDefinition
-		name: #Object
-		superclassName: nil
-		category: 'no category'
-		instVarNames: #( )
-		comment: 'no comments').
+	module declareClass: res.
 	
 	"Create point class without instance variables"
-	pointClass := module declareClass: (MCClassDefinition
-		name: #Point
-		superclassName: #Object
-		category: 'no category'
-		instVarNames: #( )
-		comment: 'no comments').
+	pointClass := module declareClass: (CDClassDefinitionParser parse: '',Object name,' subclass: #Point').
 	
 	self assert: pointClass allSlots size equals: 0.
 	
 	"Recreate point class with instance variables"
-	module declareClass: (MCClassDefinition
-		name: #Object
-		superclassName: nil
-		category: 'no category'
-		instVarNames: #( x y )
-		comment: 'no comments').
+	res:=(CDClassDefinitionParser parse: '',Object name,' subclass: #Point instanceVariableNames: ''x y''').
+		res superclassName:#nil.
+		res superclassNameNode:nil.
+	module declareClass: res.
 	
 	self assert: pointClass allSlots size equals: 2.
 	

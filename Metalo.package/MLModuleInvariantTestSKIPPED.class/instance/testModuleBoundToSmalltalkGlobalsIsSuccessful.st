@@ -6,7 +6,7 @@ testModuleBoundToSmalltalkGlobalsIsSuccessful
 	registry at: #Network put: Smalltalk globals.
 	testModule := MLModuleDefinition networkTests createModuleBoundTo: registry.
 	
-	socketTest := testModule classNamed: #SocketTest.
+	socketTest := testModule definedClassNamed: #SocketTest.
 	result := socketTest run: #testClientConnect.
 	
 	self assert: result hasPassed

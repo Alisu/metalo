@@ -8,7 +8,7 @@ testModuleBoundToNetworkModuleIsSuccessful
 	
 	testModule := self networkTests bindTo: registry; yourself.
 	
-	socketTest := testModule classNamed: #SocketTest.
+	socketTest := testModule definedClassNamed: #SocketTest.
 	result := socketTest run: #testClientConnect.
 	
 	self assert: result hasPassed

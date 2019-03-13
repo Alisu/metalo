@@ -8,10 +8,10 @@ testChangingNetworkModuleAffectsItsImporters
 	
 	testModule := self networkTests bindTo: registry; yourself.
 
-	socket := networkModule classNamed: #Socket.
+	socket := networkModule definedClassNamed: #Socket.
 	networkModule compileMethod: 'isConnected ^ false' inClass: socket.
 	
-	socketTest := testModule classNamed: #SocketTest.
+	socketTest := testModule definedClassNamed: #SocketTest.
 	result := socketTest run: #testClientConnect.
 	
 	self assert: result hasFailures

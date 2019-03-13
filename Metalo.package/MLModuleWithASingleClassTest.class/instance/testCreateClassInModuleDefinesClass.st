@@ -1,4 +1,4 @@
 tests
 testCreateClassInModuleDefinesClass
 
-	self assert: (module classNamed: self definedClassName) isClass
+	self assert: (module definedClassNamed: self definedClassName) isClass
