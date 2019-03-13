@@ -3,6 +3,8 @@ testRedefineSuperclassShouldAlsoRedefineClassSide
 
 	|res|
 	
+	MLModuleRegistry global at: #'Kernel' put: ((MLModule newNamed: 'Kernel') environment: Smalltalk globals).
+	
 	res:=(CDClassDefinitionParser parse: 'Object subclass: #Point' ).
 		
 	module declareClass: res.
@@ -17,10 +19,10 @@ testRedefineSuperclassShouldAlsoRedefineClassSide
 	
 	self assert: (module undeclaredNames isEmpty).
 	self assert: ((module definedClassNamed:#Point) superclass class == (module definedClassNamed:#Point)class superclass).
-		
+	
 	"Now we bind it"
 	module bindTo: module defaultNameResolver.
-	self assert: ((module definedClassNamed:#Point) superclass == (ShSmalltalkGlobalsEnvironment new definedClassNamed:#Object)).
+	self assert: ((module definedClassNamed:#Point) superclass == (ShSmalltalkGlobalsEnvironment new classNamed:#Object)).
 	self assert: ((module definedClassNamed:#Point) superclass class == (module definedClassNamed:#Point)class superclass).
 
 	
