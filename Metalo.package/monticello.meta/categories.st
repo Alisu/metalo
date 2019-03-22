@@ -7,3 +7,5 @@ SystemOrganization addCategory: #'Metalo-Example'!
 SystemOrganization addCategory: #'Metalo-Tests'!
 SystemOrganization addCategory: #'Metalo-Tests-Integration'!
 SystemOrganization addCategory: #'Metalo-Todo'!
+SystemOrganization addCategory: #'Metalo-Virtualization'!
+SystemOrganization addCategory: #'Metalo-Virtualization-test'!

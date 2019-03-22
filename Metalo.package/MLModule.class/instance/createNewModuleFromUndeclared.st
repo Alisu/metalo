@@ -13,6 +13,6 @@ createNewModuleFromUndeclared
 					self bindTo: self defaultNameResolver]
 				ifFalse: [ anUName first isUppercase
 						ifTrue: [ module
-								declareClass: (CDClassDefinitionParser parse: 'nil subclass: ' , anUName).
+								declareClass: (CDClassDefinitionParser parse: 'LogClass subclass: ' , anUName).
 							self declareImport: anUName from: module name.
 							self bindTo: self defaultNameResolver ] ] ]

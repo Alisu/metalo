@@ -19,7 +19,6 @@ testRedefineSuperclassShouldAlsoRedefineClassSide
 	
 	self assert: (module undeclaredNames isEmpty).
 	self assert: ((module definedClassNamed:#Point) superclass class == (module definedClassNamed:#Point)class superclass).
-	
 	"Now we bind it"
 	module bindTo: module defaultNameResolver.
 	self assert: ((module definedClassNamed:#Point) superclass == (ShSmalltalkGlobalsEnvironment new classNamed:#Object)).
