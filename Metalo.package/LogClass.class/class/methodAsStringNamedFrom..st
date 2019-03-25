@@ -1,4 +1,4 @@
-Accessing
+reflective operations
 methodAsStringNamedFrom: aMessage
 
 	aMessage selector isUnary ifFalse: [ self halt ].
