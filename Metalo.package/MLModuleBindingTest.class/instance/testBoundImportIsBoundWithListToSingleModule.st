@@ -1,6 +1,6 @@
-tests
-testBoundImportIsBoundWithListToBoundModule
-| importee importer import linkedlist|
+bind-list
+testBoundImportIsBoundWithListToSingleModule
+	| importee importer import linkedlist|
 
 	importee := MLModule newNamed: #SomeContainerModule.
 	importee declareVariableNamed: #SomeName.

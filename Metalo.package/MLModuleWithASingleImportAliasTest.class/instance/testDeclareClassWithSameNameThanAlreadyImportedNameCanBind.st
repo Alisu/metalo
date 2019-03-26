@@ -1,5 +1,6 @@
 tests
 testDeclareClassWithSameNameThanAlreadyImportedNameCanBind
+
 	module declareClassNamed: self importedName.
 	module bindTo: module defaultNameResolver.
 	
