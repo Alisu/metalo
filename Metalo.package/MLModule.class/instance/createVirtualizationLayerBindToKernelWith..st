@@ -1,5 +1,5 @@
 virtualization
-createNewModuleFromUndeclaredWithSystemClasses: aCollection
+createVirtualizationLayerBindToKernelWith: aCollection
 	"create a new module from our undeclared class, import them which resolve undeclared"
 
 	| module |
@@ -15,6 +15,7 @@ createNewModuleFromUndeclaredWithSystemClasses: aCollection
 					self bindTo: self defaultNameResolver]
 				ifFalse: [ anUName first isUppercase
 						ifTrue: [ 
-							VirtualizationStrategy new useLogClass: module for: anUName .
+							VirtualizationStrategy new useBindingToKernel: module for: anUName.
+							module bindTo: module defaultNameResolver.
 							self declareImport: anUName from: module name.
 							self bindTo: self defaultNameResolver ] ] ]

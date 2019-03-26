@@ -6,7 +6,7 @@ testBoundImportIsNotInUnboundImportCollection
 	importee declareVariableNamed: #SomeName.
 
 	importer := MLModule newNamed: 'MEmptyModule'.
-	importer declareImport: #SomeName from: #SomeContainerModule.
+	importer declareImport: #SomeName from: #SomeContainerModule as: #Pouet.
 
 	importer bindTo: importee.
 

@@ -1,0 +1,3 @@
+accessing
+aliasName
+	^ aliasName

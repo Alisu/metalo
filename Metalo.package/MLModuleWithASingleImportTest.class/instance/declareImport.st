@@ -1,3 +1,4 @@
-test support
+running
 declareImport
-	^ module declareImport: self importedName from: self importedModuleName
+
+self subclassResponsibility 

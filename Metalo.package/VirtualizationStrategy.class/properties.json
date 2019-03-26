@@ -1,11 +1,11 @@
 {
-	"commentStamp" : "theorogliano 3/25/2019 16:12",
+	"commentStamp" : "theorogliano 3/25/2019 16:28",
 	"super" : "Object",
 	"category" : "Metalo-Virtualization",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [ ],
-	"name" : "LogClass",
+	"name" : "VirtualizationStrategy",
 	"type" : "normal"
 }

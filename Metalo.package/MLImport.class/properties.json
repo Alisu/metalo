@@ -9,7 +9,8 @@
 		"nameToImport",
 		"bindingSourceName",
 		"module",
-		"importBinding"
+		"importBinding",
+		"aliasName"
 	],
 	"name" : "MLImport",
 	"type" : "normal"

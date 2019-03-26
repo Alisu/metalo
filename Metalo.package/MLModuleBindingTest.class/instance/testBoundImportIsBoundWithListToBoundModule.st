@@ -1,5 +1,5 @@
 tests
-testBoundImportWithListIsBoundToBoundModule
+testBoundImportIsBoundWithListToBoundModule
 | importee importer import linkedlist|
 
 	importee := MLModule newNamed: #SomeContainerModule.

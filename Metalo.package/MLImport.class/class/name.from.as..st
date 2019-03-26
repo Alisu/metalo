@@ -1,8 +1,8 @@
 instance-creation
-name: aName from: aBindingSourceName
+name: aName from: aBindingSourceName as: aliasName
 
 	^ self new
 		name: aName;
 		bindingSourceName: aBindingSourceName;
-		aliasName: aName;
+		aliasName: aliasName;
 		yourself

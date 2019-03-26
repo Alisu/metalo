@@ -1,3 +1,3 @@
 printing
 printOn: aStream
-	aStream nextPutAll: 'Import: ', nameToImport, ' from: ', bindingSourceName 
+	aStream nextPutAll: 'Import: ', nameToImport, ' from: ', bindingSourceName, ' as: ', aliasName.
