@@ -1,0 +1,14 @@
+{
+	"commentStamp" : "theorogliano 3/26/2019 13:37",
+	"super" : "Object",
+	"category" : "Virtualization-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"virtualizedModule",
+		"virtualizationLayer"
+	],
+	"name" : "Virtualizer",
+	"type" : "normal"
+}

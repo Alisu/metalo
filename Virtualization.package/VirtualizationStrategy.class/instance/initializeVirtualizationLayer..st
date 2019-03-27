@@ -1,0 +1,4 @@
+initialization
+initializeVirtualizationLayer: aVirtualizationModule
+
+	self subclassResponsibility 

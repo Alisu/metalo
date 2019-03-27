@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "StrategyVirtualizationTest",
+	"category" : "Virtualization-Test",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "LogClassStrategyTest",
+	"type" : "normal"
+}

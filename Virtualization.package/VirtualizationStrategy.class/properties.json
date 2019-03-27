@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "theorogliano 3/26/2019 13:38",
+	"super" : "Object",
+	"category" : "Virtualization-Strategies",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"nextStrategy"
+	],
+	"name" : "VirtualizationStrategy",
+	"type" : "normal"
+}

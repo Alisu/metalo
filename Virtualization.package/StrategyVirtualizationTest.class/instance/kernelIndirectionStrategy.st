@@ -1,0 +1,4 @@
+setup
+kernelIndirectionStrategy
+
+	^ VirtualizationKernelIndirectionClassStrategy new.
