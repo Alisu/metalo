@@ -2,4 +2,4 @@ class creation
 declareClasses: aCollection 
 	
 	aCollection do: [ :each | 
-		self declareClass: each asAST ]
+		self declareClass: each asClassDefinitionNode  ]

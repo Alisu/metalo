@@ -1,5 +1,5 @@
 *Metalo
-asAST
+asClassDefinitionNode
 |ast|
 	ast:=CDClassDefinitionParser parse: self definitionNew.
 	^ast

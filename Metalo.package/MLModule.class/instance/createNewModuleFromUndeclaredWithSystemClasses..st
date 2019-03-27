@@ -14,7 +14,8 @@ createNewModuleFromUndeclaredWithSystemClasses: aCollection
 					self declareImport: anUName from: #Kernel.
 					self bindTo: self defaultNameResolver]
 				ifFalse: [ anUName first isUppercase
-						ifTrue: [ 
+						ifTrue: [
 							VirtualizationStrategy new useLogClass: module for: anUName .
 							self declareImport: anUName from: module name.
-							self bindTo: self defaultNameResolver ] ] ]
+							self bindTo: self defaultNameResolver ] ] ].
+	^ module
