@@ -1,0 +1,5 @@
+accessing
+declareImport: aName
+	
+^self declareImport: aName from: 'Unknown' 
+	

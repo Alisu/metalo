@@ -5,7 +5,7 @@ redefineAs: aBinding
 	| oldMetaclass |
 	self value
 		ifNotNil: [ :bindingValue | 
-			(bindingValue isClass and: [ aBinding value isClass ])
+			(bindingValue isClass)
 				ifTrue: [ oldMetaclass := bindingValue class ]
 				ifFalse: [ self error: 'Try to bind something that is not a class' ].
 			"and: [ (bindingValue format = aBinding value format) not ] ])
@@ -15,5 +15,5 @@ redefineAs: aBinding
 			oldMetaclass}
 				elementsForwardIdentityTo:
 					{aBinding value.
-					aBinding value class} ].
+					aBinding value class} copyHash: false ].
 	self becomeForward: aBinding
