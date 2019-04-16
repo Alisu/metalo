@@ -1,3 +1,3 @@
 importing
 printDeclaration
-	^'declareImport: ', self importedName, ' from: ', self moduleName, ' as: ', self aliasName.
+	^'MLImport name: ''', self importedName, ''' from: ''', self moduleName, ''' as: ''', self aliasName,''''.
