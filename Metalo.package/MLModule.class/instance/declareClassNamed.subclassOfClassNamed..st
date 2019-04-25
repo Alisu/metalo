@@ -1,6 +1,8 @@
 class creation
 declareClassNamed: aClassName subclassOfClassNamed: aSuperclassName
-	| res |
+
+	| res |	
+	self flag:#WeirdClassDefinition.
 	aSuperclassName isNil
 		ifTrue: [ res := CDClassDefinitionParser
 				parse: '' , Object name , ' subclass: ' , aClassName.

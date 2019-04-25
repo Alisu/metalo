@@ -10,16 +10,12 @@ declareClass: aClassDefinition
 				environment: self;
 				yourself).
 	"if the newly created class define an undefined, all subclasses of the undeclared should be pointing to the new define class"
-	(self undeclaredBindings
+	self undeclaredBindings
 		at: aClassDefinition className
-		ifAbsent: [ nil ])
-		ifNotNil: [ :oldClass | 
+		ifPresent: [ :oldClass | 
 			oldClass superclass removeSubclass: oldClass.
 			oldClass subclasses
 				do: [ :subclass | 
-					subclass basicSuperclass: newClass.
-					newClass addSubclass: subclass ] ].
-	self undeclaredBindings
-		removeKey: aClassDefinition className
-		ifAbsent: [  ].
+					MLClassInstaller remake: subclass instanceSide ].
+			self undeclaredBindings removeKey: aClassDefinition className ].
 	^ newClass
