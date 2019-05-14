@@ -7,4 +7,6 @@ removeImport: aName
 	import := self imports detect: [ :each | 
 		each aliasName = aName ].
 	self imports remove: import.
-	self checkUndeclaredBinding: import binding
+	importsEnvironment removeKey: aName.
+	self removeModuleUsersIn: import.
+	self checkUndeclaredBinding: import binding 

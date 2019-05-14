@@ -3,10 +3,11 @@ loadRPackage: anRPackage withImportDeclarations: imports
 
 	| module |
 	module := self newNamed: (self packageToModuleName: anRPackage name).
-	
-	imports keysAndValuesDo: [ :anRPackageName :aCollectionOfClassNames |
+
+	self flag: #TemporaryHack. "should be an RPackage insteaad of Kernel but for now Kernel is enough"
+		imports keysAndValuesDo: [ :anRPackageName :aCollectionOfClassNames |
 		aCollectionOfClassNames do: [ :aNameToImport |
-			module declareImport: aNameToImport from: anRPackageName ] ].
+			module declareImport: aNameToImport from: #Kernel ] ].
 		
 	MLRPackageLoader new
 		rpackage: anRPackage;

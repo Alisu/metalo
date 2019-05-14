@@ -6,4 +6,4 @@ testRedefineUndeclaredSuperclassBindingChangesSuperclass
 	module declareClassNamed: self undeclaredName.
 	
 	self assert: module undeclaredNames isEmpty.
-	self assert: (module definedClassNamed: self definedClassName) superclass equals: (module definedClassNamed: self undeclaredName)
+	self assert: (module definedClassNamed: self definedClassName) superclass equals: (module definedClassNamed: self undeclaredName).
