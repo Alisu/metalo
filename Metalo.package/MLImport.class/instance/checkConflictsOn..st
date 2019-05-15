@@ -7,5 +7,5 @@ checkConflictsOn: aMLModule
 	aMLModule imports
 		detect: [ :each | each aliasName = self aliasName ]
 		ifFound: [ :found |
-				self error: ('Cannot import {1} from {2}: {1} is already imported from {3}'
-					format: { self importedName . bindingSourceName . found moduleName }) ].
+				self error: ('Cannot import {1} from {2}: {1} is already imported from {3} as {4}'
+					format: { self importedName . bindingSourceName . found moduleName . self aliasName}) ].

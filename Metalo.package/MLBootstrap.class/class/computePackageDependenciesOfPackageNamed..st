@@ -11,12 +11,12 @@ computePackageDependenciesOfPackageNamed: aPackageName
 	dependentClasses
 		do: [ :dependantName | 
 			| class |
+			self flag: #SmalltalkReference.
 			class := Smalltalk globals at: dependantName asSymbol.
-			class isTrait
-				ifFalse: [ (dict
-						at: class package name
-						ifAbsent: [ dict at: class package name put: OrderedCollection new ])
-						add: dependantName ] ].
+			(dict
+				at: class package name
+				ifAbsent: [ dict at: class package name put: OrderedCollection new ])
+				add: dependantName ].
 	(self computePackageToGlobalDependencies
 		at: aPackageName
 		ifAbsent: [ #() ])
