@@ -14,7 +14,14 @@ declareTrait: aTraitDefinition
 		ifPresent: [ :oldTrait | 
 			newTrait users: oldTrait users.
 			newTrait isStateful
-				ifTrue: [ newTrait users do: [ :aUser | MLClassInstaller remake: aUser instanceSide] ]
+				ifTrue: [ newTrait users
+						do: [ :aUser | 
+							MLClassInstaller new
+								remake: aUser instanceSide
+								inEnv:
+									(MLDefinedClassInstallationEnvironment new
+										environment: aUser environment;
+										yourself) ] ]
 				ifFalse: [ newTrait users do: [ :aUser | aUser rebuildMethodDictionary ] ].
 			self undeclaredBindings removeKey: aTraitDefinition className ].
 	^ newTrait

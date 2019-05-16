@@ -15,7 +15,12 @@ declareClass: aClassDefinition
 		ifPresent: [ :oldClass | 
 			oldClass superclass removeSubclass: oldClass.
 			oldClass subclasses
-				do: [ :subclass | 
-					MLClassInstaller remake: subclass instanceSide ].
+				do: [ :aUser | 
+					MLClassInstaller new
+						remake: aUser instanceSide
+						inEnv:
+							(MLDefinedClassInstallationEnvironment new
+								environment: aUser environment;
+								yourself) ].
 			self undeclaredBindings removeKey: aClassDefinition className ].
 	^ newClass
