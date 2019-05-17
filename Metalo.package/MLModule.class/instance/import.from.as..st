@@ -2,7 +2,7 @@ imports
 import: aName from: aContainerModuleName as:aliasName
 	
 	| import |
-	import := MLImport name: aName from: aContainerModuleName as: aliasName.
+	import := MLImport name: aName from: aContainerModuleName as: aliasName receiver: self.
 	import checkConflictsOn: self.
 	
 	"Resolve the import. Fail if cannot resolve."

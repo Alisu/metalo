@@ -2,7 +2,7 @@ imports
 declareImport: aName from: aContainerModuleName 
 	
 	| import |
-	import := MLImport name: aName from: aContainerModuleName.
+	import := MLImport name: aName from: aContainerModuleName receiver: self.
 	import checkRedundancyOn: self ifRedundant: [ :existingImport | ^ existingImport ].
 	import checkConflictsOn: self.
 	

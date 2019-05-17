@@ -7,9 +7,13 @@ resolveUsing: moduleRegistry
 	(moduleRegistry
 		definesName: nameToImport
 		inModuleNamed: bindingSourceName)
-			ifTrue: [ newBinding := moduleRegistry bindingOf: nameToImport inModuleNamed: bindingSourceName ]
-			ifFalse: [ newBinding := MLUnboundVariable named: nameToImport ].
-
-	(self binding == newBinding)
-		ifFalse: [ self binding redefineAs: newBinding ].
+		ifTrue: [ newBinding := moduleRegistry
+				bindingOf: nameToImport
+				inModuleNamed: bindingSourceName ]
+		ifFalse: [ newBinding := MLUnboundVariable named: nameToImport ].
+	self binding == newBinding
+		ifFalse: [ | methods |
+			methods := self module collectMethodsReferencing: self binding.
+			self binding redefineAs: newBinding.
+			methods do: [ :aMethod | aMethod recompile ] ].
 	^ self binding

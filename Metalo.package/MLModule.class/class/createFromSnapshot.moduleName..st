@@ -4,20 +4,26 @@ createFromSnapshot: aSnapshot moduleName: aName
 	module := MLModule newNamed: aName.
 
 	"1st pass is for class definition and hierarchy"
-	aSnapshot definitions do: [ :aDefinition | 
-		aDefinition isClassDefinition
-			ifTrue: [ module declareClass: aDefinition asRBClassDefinition ] ].
+	aSnapshot definitions
+		do: [ :aDefinition | 
+			aDefinition isClassDefinition
+				ifTrue: [ module declareClass: aDefinition asRBClassDefinition ] ].
 
 	"2nd pass is for method, if the class still doesn't exist it's an extension method we call a resolver"
-	aSnapshot definitions do: [ :aDefinition | 
-		(aDefinition isMethodDefinition and: [ aDefinition isExtensionMethod not ]) ifTrue: [
-			module
-				compileMethod: aDefinition source
-				inClass:
-					(module
-						classNamed: aDefinition className
-						ifAbsent: [ module declareClassNamed: aDefinition className ]) ] ].
-
+	aSnapshot definitions
+		do: [ :aDefinition | 
+			(aDefinition isMethodDefinition
+				and: [ aDefinition isExtensionMethod not ])
+				ifTrue: [ module
+						compileMethod: aDefinition source
+						inClass:
+							(aDefinition classIsMeta
+								ifFalse: [ module
+										classNamed: aDefinition className
+										ifAbsent: [ module declareClassNamed: aDefinition className ] ]
+								ifTrue: [ (module
+										classNamed: aDefinition className
+										ifAbsent: [ module declareClassNamed: aDefinition className ])
+										class ]) ] ].
 	MLModuleRegistry global at: module name put: module.
-
 	^ module
