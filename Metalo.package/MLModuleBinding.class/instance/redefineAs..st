@@ -2,7 +2,6 @@ redefinition
 redefineAs: aBinding
 	"Since this binding belongs to the module, we are free of becoming the value."
 
-	| methods |
 	self value
 		ifNotNil: [ :bindingValue | 
 			bindingValue isClass
