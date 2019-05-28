@@ -11,5 +11,5 @@ testImportBoundTraitShouldUpdateUsers
 	module bindTo: MLModuleRegistry global.
 	
 	self assert: (module undeclaredNames isEmpty).
-	self assert: ((module definedClassNamed: 'TestUseTrait') methodDictionary keys) equals: ((module at: self importTraitName) methodDictionary keys)
+	self assert: (((module definedClassNamed: 'TestUseTrait') methodDictionary keys) includesAll: ((module at: self importTraitName) methodDictionary keys))
 	
