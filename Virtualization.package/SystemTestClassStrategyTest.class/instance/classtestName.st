@@ -1,3 +1,0 @@
-setup
-classtestName
-^#TestCase

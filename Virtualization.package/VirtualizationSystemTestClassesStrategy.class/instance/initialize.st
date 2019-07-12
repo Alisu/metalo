@@ -1,3 +1,0 @@
-initialization
-initialize 
-self nextStrategy: VirtualizationKernelIndirectionClassStrategy  new.

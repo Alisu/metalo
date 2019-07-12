@@ -1,1 +1,0 @@
-I am a class that create the selector expected by doesNotUnderstand:

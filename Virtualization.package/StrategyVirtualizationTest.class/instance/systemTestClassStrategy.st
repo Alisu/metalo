@@ -1,4 +1,0 @@
-setup
-systemTestClassStrategy
-
-	^ VirtualizationSystemTestClassesStrategy new.

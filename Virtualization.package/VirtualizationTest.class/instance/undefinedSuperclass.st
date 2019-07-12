@@ -1,7 +1,0 @@
-running
-undefinedSuperclass
-	^#Object.
-	
-	
-	
-
