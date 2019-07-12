@@ -3,9 +3,6 @@ setUp
 
 	super setUp.
 
-	module1 := MLModule newNamed: 'ModuleWithClasstToExtend'.
-	MLModuleRegistry global registerModule: module1.
-	module2 := MLModule newNamed: 'ModuleExtending1'.
-	MLModuleRegistry global registerModule: module2.
-	module3 := MLModule newNamed: 'ModuleExtending2'.
-	MLModuleRegistry global registerModule: module3.
+	module1 := MLModule newNamed: 'myModule1'.
+	module2 := MLModule newNamed: 'myModule2'.
+	module3 := MLModule newNamed: 'myModule3'.
