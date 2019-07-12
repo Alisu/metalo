@@ -12,5 +12,5 @@ testClassUsesImportedBoundTrait
 	
 	self assert: (module definesName: 'TestUseTrait').
 	
-	self assert: ((module definedClassNamed: 'TestUseTrait') methodDictionary keys) equals: ((module at: self importTraitName) methodDictionary keys)
+	self assert: (((module definedClassNamed: 'TestUseTrait') methodDictionary keys) includesAll: ((module at: self importTraitName) methodDictionary keys))
 	

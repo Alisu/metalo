@@ -14,8 +14,9 @@ createFromDefinitions: definitions moduleName: aName
 	"2rd pass is for method, if the class still doesn't exist it's an extension method we call a resolver"
 	definitions
 		do: [ :aDefinition | 
-			(aDefinition isMethodDefinition and: [ aDefinition isExtensionMethod not ])
-				ifTrue: [ | class |
+			aDefinition isMethodDefinition ifTrue: [ 
+				aDefinition isExtensionMethod not
+					ifTrue: [ | class |
 					class := module
 						classNamed: aDefinition className
 						ifAbsent: [ module declareClassNamed: aDefinition className ].
@@ -32,10 +33,11 @@ createFromDefinitions: definitions moduleName: aName
 									(aDefinition classIsMeta
 										ifFalse: [ class ]
 										ifTrue: [ class class ]) ] ]
-				ifFalse: [ | class | 
-					class := Smalltalk globals at: aDefinition className.
-					aDefinition classIsMeta ifTrue: [ class := class classSide ].
-					class compile: aDefinition source classified: aDefinition protocol ] ].
+				ifFalse: [
+					Smalltalk globals at: aDefinition className ifPresent: [ :class | | theClass |
+						theClass := class.
+						aDefinition classIsMeta ifTrue: [ theClass := theClass classSide ].
+						theClass compile: aDefinition source classified: aDefinition protocol ] ] ] ].
 	module classesAndTraits
 		do: [ :aBehavior | 
 			(aBehavior canUnderstand: #rebuildMethodDictionary)
