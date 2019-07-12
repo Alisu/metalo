@@ -11,7 +11,8 @@
 		"imports",
 		"classBindings",
 		"variableBindings",
-		"importsEnvironment"
+		"importsEnvironment",
+		"extension"
 	],
 	"name" : "MLModule",
 	"type" : "normal"

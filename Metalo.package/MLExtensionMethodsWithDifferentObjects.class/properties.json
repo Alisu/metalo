@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "MLMultipleModuleTest",
+	"category" : "Metalo-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"definedClassToExtend"
+	],
+	"name" : "MLExtensionMethodsWithDifferentObjects",
+	"type" : "normal"
+}
