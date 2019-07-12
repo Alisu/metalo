@@ -1,4 +1,0 @@
-tests
-logStrategy
-
-	^ VirtualizationLogClassStrategy new.

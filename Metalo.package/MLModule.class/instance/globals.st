@@ -1,0 +1,4 @@
+smalltalk-compatibility
+globals
+
+	^ self

@@ -1,4 +1,0 @@
-*Metalo
-redefineAs: aBinding
-
-	self 

@@ -1,3 +1,0 @@
-tests
-logclassName
-^#LogClass

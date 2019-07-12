@@ -3,8 +3,6 @@ basicCreateClass: aClassDefinition superclass: aSuperclass inEnvironment: classB
 	"Low level API.
 	Mainly used to create undefined classes"
 
-	aClassDefinition traitDefinition isNil ifFalse: [ Transcript crShow: 'TraitComposition missing for: ', aClassDefinition className ].
-
 	DangerousClassNotifier disableDuring: [
 		^ MLClassInstaller new
 			installingEnvironment: classBuilderEnvironment;
