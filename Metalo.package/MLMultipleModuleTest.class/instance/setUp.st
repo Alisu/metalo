@@ -3,6 +3,8 @@ setUp
 
 	super setUp.
 
+	Object compiler addPlugin: #MyPlugin.
+
 	module1 := MLModule newNamed: 'ModuleWithClasstToExtend'.
 	MLModuleRegistry global registerModule: module1.
 	module2 := MLModule newNamed: 'ModuleExtending1'.

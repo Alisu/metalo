@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TheoRogliano 7/15/2019 09:02",
+	"super" : "OCCompilerASTPlugin",
+	"category" : "Metalo",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MyPlugin",
+	"type" : "normal"
+}

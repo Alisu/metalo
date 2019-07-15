@@ -12,7 +12,7 @@
 		"classBindings",
 		"variableBindings",
 		"importsEnvironment",
-		"extension"
+		"extensions"
 	],
 	"name" : "MLModule",
 	"type" : "normal"

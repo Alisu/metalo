@@ -7,3 +7,4 @@ initialize
 	classBindings := Dictionary new.
 	variableBindings := Dictionary new.
 	undeclaredBindings := Dictionary new.
+	extensions := Set new.
