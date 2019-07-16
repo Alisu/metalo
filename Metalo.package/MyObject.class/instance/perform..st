@@ -6,4 +6,4 @@ perform: aSymbol
 	selector:= Selector new: aSymbol inEnv: environment.
 	method := MyObject lookupSeletor: selector forClass: self class.
 	method ifNotNil:[	^ self perform: method selector withArguments: (Array new: 0) ]
-		ifNil:[self error: 'DNU' selector symbol]
+		ifNil:[self error: 'DNU ', selector symbol]
