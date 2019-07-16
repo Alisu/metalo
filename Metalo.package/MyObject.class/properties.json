@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "TheoRogliano 7/16/2019 11:32",
+	"super" : "Object",
+	"category" : "Metalo-Core",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MyObject",
+	"type" : "normal"
+}
