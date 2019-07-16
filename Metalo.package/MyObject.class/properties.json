@@ -5,10 +5,7 @@
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"symbol",
-		"environment"
-	],
-	"name" : "Selector",
+	"instvars" : [ ],
+	"name" : "MyObject",
 	"type" : "normal"
 }

@@ -1,6 +1,5 @@
 binding-resolution
 at: aName put: anObject
-
 	
 	| oldBinding newBinding |
 	oldBinding := self resolveBinding: aName.

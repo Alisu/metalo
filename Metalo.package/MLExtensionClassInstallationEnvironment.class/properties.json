@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "MLAbstractInstallationEnvironment",
+	"category" : "Metalo-Compilation",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "MLExtensionClassInstallationEnvironment",
+	"type" : "normal"
+}
