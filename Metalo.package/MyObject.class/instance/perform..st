@@ -1,7 +1,8 @@
 message performing
 perform: aSymbol 
-	"Send the unary selector, aSymbol, to the receiver.
-	Fail if the number of arguments expected by the selector is not zero.
-	Primitive. Optional. See Object documentation whatIsAPrimitive."
 	
-	^ self perform: aSymbol withArguments: (Array new: 0)
+	| environment method |
+	environment := thisContext sender receiver class environment.
+	method := MyObject lookupSelector: aSymbol forClass: self class withEnv: environment.
+	method ifNotNil:[	method valueWithReceiver: self arguments: (Array new: 0)]
+		ifNil:[self error: 'DNU ', aSymbol]

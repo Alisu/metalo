@@ -5,7 +5,7 @@ setUp
 
 	Object compiler addPlugin: #MyPlugin.
 
-	module1 := MLModule newNamed: 'ModuleWithClasstToExtend'.
+	module1 := MLModule newNamed: 'ModuleWithClassToExtend'.
 	MLModuleRegistry global registerModule: module1.
 	module2 := MLModule newNamed: 'ModuleExtending1'.
 	MLModuleRegistry global registerModule: module2.
