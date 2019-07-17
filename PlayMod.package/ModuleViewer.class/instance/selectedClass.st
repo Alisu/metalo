@@ -1,0 +1,4 @@
+initialization
+selectedClass
+
+	^ classList selectedClass

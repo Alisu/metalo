@@ -1,0 +1,4 @@
+accessing
+classes
+	
+	^ listModel items

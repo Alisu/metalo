@@ -1,0 +1,15 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposablePresenter",
+	"category" : "PlayMod-Classes-Methods",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"listModel",
+		"textModel",
+		"toolbarModel"
+	],
+	"name" : "MethodModuleBrowser",
+	"type" : "normal"
+}

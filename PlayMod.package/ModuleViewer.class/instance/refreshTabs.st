@@ -1,0 +1,4 @@
+refreshing
+refreshTabs
+	
+	definitionsNotebook resetAllPageContents

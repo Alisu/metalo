@@ -1,0 +1,4 @@
+initialization
+refreshMethods
+
+	classList refreshMethods .
