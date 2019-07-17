@@ -7,7 +7,7 @@
 	"classvars" : [ ],
 	"instvars" : [
 		"symbol",
-		"environment"
+		"environments"
 	],
 	"name" : "Selector",
 	"type" : "normal"
