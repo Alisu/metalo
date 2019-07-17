@@ -10,7 +10,8 @@ initializeWidgets
 		addPage: self classListTab;
 		addPage: self importListTab;
 		addPage: self variableListTab;
-		addPage: self undeclaredListTab.
+		addPage: self undeclaredListTab;
+		addPage: self extensionListTab.
 	
 	definitionsNotebook := self newNotebook.
 	definitionsNotebook

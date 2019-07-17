@@ -1,4 +1,4 @@
 selection
 unselectAll
 	
-	listModel unselectAll
+	classModel unselectAll

@@ -1,3 +1,3 @@
 accessing
 selectedClass
-	^ listModel selection selectedItem
+	^ classModel selection selectedItem

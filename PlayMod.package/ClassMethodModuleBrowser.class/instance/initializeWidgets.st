@@ -1,8 +1,11 @@
 accessing
 initializeWidgets
-	listModel := self instantiate:  ListPresenter.
-	methodModel := self instantiate: ListPresenter.
+	classModel := self instantiate:  ListPresenter.
+	instanceMethodModel := self instantiate: ListPresenter.
+	classMethodModel := self instantiate: ListPresenter.
 	self focusOrder
-		add: listModel;
-		add: methodModel.
-	methodModel displayBlock: [ :method | method selector ]
+		add: classModel;
+		add: instanceMethodModel;
+		add: classMethodModel.
+	instanceMethodModel displayBlock: [ :method | method selector ].
+	classMethodModel displayBlock: [ :method | method selector ]

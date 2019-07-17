@@ -1,3 +1,3 @@
 as yet unclassified
 classContextMenu: aMenuPresenter 
-	self listModel contextMenu: aMenuPresenter.
+	self classModel contextMenu: aMenuPresenter.

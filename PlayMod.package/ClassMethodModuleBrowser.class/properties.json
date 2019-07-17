@@ -6,8 +6,9 @@
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"listModel",
-		"methodModel"
+		"classModel",
+		"instanceMethodModel",
+		"classMethodModel"
 	],
 	"name" : "ClassMethodModuleBrowser",
 	"type" : "normal"
