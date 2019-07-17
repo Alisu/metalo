@@ -1,0 +1,3 @@
+*PlayMod
+pagesNumber
+	^pagesHolder size

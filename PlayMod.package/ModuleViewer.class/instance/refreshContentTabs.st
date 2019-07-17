@@ -1,0 +1,4 @@
+refreshing
+refreshContentTabs
+	
+	moduleContentsNotebook resetAllPageContents

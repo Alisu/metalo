@@ -1,0 +1,16 @@
+{
+	"commentStamp" : "",
+	"super" : "TestCase",
+	"category" : "PlayMod-Tests",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"registry",
+		"module",
+		"browser",
+		"class"
+	],
+	"name" : "ModuleBrowserTest",
+	"type" : "normal"
+}

@@ -1,0 +1,1 @@
+(ModuleViewer on: MLModuleRegistry global) openWithSpec.

@@ -1,0 +1,23 @@
+{
+	"commentStamp" : "",
+	"super" : "ComposablePresenter",
+	"category" : "PlayMod-Modules-Imports-Classes",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"modules",
+		"moduleList",
+		"moduleRegistry",
+		"menu",
+		"definitionsNotebook",
+		"moduleContentsNotebook",
+		"extensionList",
+		"undeclaredList",
+		"classList",
+		"importList",
+		"variableList"
+	],
+	"name" : "ModuleViewer",
+	"type" : "normal"
+}
