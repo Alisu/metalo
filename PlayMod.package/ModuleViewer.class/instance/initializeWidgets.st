@@ -16,6 +16,7 @@ initializeWidgets
 	definitionsNotebook := self newNotebook.
 	definitionsNotebook
 		addPage: self moduleDefinitionTab.
+
 	
 	self focusOrder
 		add: modules;

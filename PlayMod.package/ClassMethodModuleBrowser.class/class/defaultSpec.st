@@ -3,7 +3,7 @@ defaultSpec
 <spec>
 	^ SpecLayout composed
 		newRow: [:row | row
-			add: #classModel width: 250;
-			add: #instanceMethodModel width: 250;
+			add: #classModel width: 300;
+			add: #instanceMethodModel;
 			add: #classMethodModel. ];
 		yourself

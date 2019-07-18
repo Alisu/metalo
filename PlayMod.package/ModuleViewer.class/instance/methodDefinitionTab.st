@@ -1,7 +1,7 @@
 method
 methodDefinitionTab
 	^ NotebookPage
-		title: 'Method definition'
+		title: 'method definition'
 		provider: [ 
 			self newText
 				"aboutToStyle: true;"
