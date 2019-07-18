@@ -1,0 +1,3 @@
+accessing
+selectedClassMethod
+	^ classMethodModel selection selectedItem

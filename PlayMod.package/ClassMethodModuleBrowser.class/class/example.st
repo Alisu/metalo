@@ -4,6 +4,6 @@ example
 	| example |
 	example := ClassMethodModuleBrowser new.
 	example
-		classes: (MLModuleRegistry global at:#SNAP) environment values;
+		classes: (MLModuleRegistry global at:#Kernel) environment values;
 		openWithSpec.
 		^example

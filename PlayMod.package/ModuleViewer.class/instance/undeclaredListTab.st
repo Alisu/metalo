@@ -3,4 +3,4 @@ undeclaredListTab
 	
 	^ NotebookPage
 		title: 'Undeclareds'
-		provider: (undeclaredList := self instantiate: WidgetClassList)
+		provider: (undeclaredList := self instantiate: ClassList)

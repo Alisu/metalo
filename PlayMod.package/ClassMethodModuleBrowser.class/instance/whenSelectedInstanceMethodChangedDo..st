@@ -1,0 +1,4 @@
+events
+whenSelectedInstanceMethodChangedDo: aBlockClosure 
+	
+	instanceMethodModel whenSelectionChangedDo: aBlockClosure

@@ -15,4 +15,5 @@ selectModule: aModule
 		classList classes: (self classesIn: aModule).
 		undeclaredList items: (self undefinedIn: aModule).
 		variableList items: (self variableIn: aModule).
+		extensionList classes: (self extensionIn: aModule).
 		self refreshDefinitionTabs. ]

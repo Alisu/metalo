@@ -1,3 +1,3 @@
-accessing
+as yet unclassified
 selectedMethod
-	^ methodModel selection selectedItem
+	^ self selectedClassMethod ifNil:[self selectedInstanceMethod]

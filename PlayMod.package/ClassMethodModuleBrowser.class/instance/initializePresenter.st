@@ -1,11 +1,13 @@
 accessing
 initializePresenter
 
-	listModel
+	classModel
 		whenSelectionChangedDo:
 			[ self selectedClass
 				ifNotNil: [ 
-					methodModel
-						items: (self selectedClass  methods sort: [ :a :b | a selector < b selector ]).
-					methodModel unselectAll ] ]
+					instanceMethodModel items: (self selectedClass  methods sort: [ :a :b | a selector < b selector ]).
+					instanceMethodModel unselectAll.
+					classMethodModel items: (self selectedClass classSide methods sort: [ :a :b | a selector < b selector ]).
+					classMethodModel unselectAll.				
+					 ] ]
 				

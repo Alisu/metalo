@@ -1,4 +1,4 @@
 events
 whenSelectedClassChangedDo: aBlockClosure 
 	
-	listModel whenSelectionChangedDo: aBlockClosure
+	classModel whenSelectionChangedDo: aBlockClosure

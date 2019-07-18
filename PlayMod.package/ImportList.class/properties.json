@@ -1,13 +1,14 @@
 {
 	"commentStamp" : "",
 	"super" : "ComposablePresenter",
-	"category" : "PlayMod-Modules-Imports-Classes",
+	"category" : "PlayMod-Import",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"manager"
+		"label",
+		"imports"
 	],
-	"name" : "Tabs_PlayMod",
+	"name" : "ImportList",
 	"type" : "normal"
 }

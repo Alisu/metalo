@@ -2,4 +2,4 @@ as yet unclassified
 variableListTab
 	^ NotebookPage
 		title: 'Variables'
-		provider: (variableList := self instantiate: WidgetClassList)
+		provider: (variableList := self instantiate: ClassList)

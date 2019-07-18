@@ -1,3 +1,3 @@
 accessing
 extensions
-	^ extensions
+	^ extensions ifNil: [Dictionary new]

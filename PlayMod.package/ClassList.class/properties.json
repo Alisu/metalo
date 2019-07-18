@@ -1,14 +1,14 @@
 {
 	"commentStamp" : "",
 	"super" : "ComposablePresenter",
-	"category" : "PlayMod-Modules-Imports-Classes",
+	"category" : "PlayMod-Class",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
 		"label",
-		"imports"
+		"classes"
 	],
-	"name" : "WidgetImportList",
+	"name" : "ClassList",
 	"type" : "normal"
 }

@@ -1,4 +1,4 @@
 selection
 selectClass: aClass 
 	
-	listModel selectItem: aClass
+	classModel selectItem: aClass

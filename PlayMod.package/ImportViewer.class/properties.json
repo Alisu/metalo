@@ -1,7 +1,7 @@
 {
 	"commentStamp" : "",
 	"super" : "ComposablePresenter",
-	"category" : "PlayMod-Modules-Imports-Classes",
+	"category" : "PlayMod-Import",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],

@@ -1,4 +1,4 @@
 accessing
 classes
 	
-	^ listModel items
+	^ classModel items

@@ -1,3 +1,5 @@
 as yet unclassified
 methodContextMenu: aMenuPresenter 
-	self methodModel contextMenu: aMenuPresenter.
+	
+	self classMethodModel contextMenu: aMenuPresenter.
+	self instanceMethodModel contextMenu: aMenuPresenter.

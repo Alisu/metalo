@@ -1,4 +1,0 @@
-accessing
-methods
-	
-	^ methodModel items
