@@ -23,3 +23,11 @@ initializePresenter
 	
 	undeclaredList 
 		classContextMenu: self buildUndeclaredContextMenu.
+	
+	self flag: #CopyPast.	"copy from class now"
+	extensionList
+		classContextMenu: self buildClassContextMenu;
+		methodContextMenu: self buildMethodContextMenu;
+		whenSelectedClassChangedDo: [ :class | class ifNotNil: [ self refreshDefinitionTabs ] ];
+		whenSelectedInstanceMethodChangedDo: [ :method | method ifNotNil: [ self refreshDefinitionTabs ] ];
+		whenSelectedClassMethodChangedDo: [ :method | method ifNotNil: [ self refreshDefinitionTabs ] ].

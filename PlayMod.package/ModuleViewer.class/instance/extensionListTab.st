@@ -3,4 +3,4 @@ extensionListTab
 		
 		^ NotebookPage
 		title: 'Extensions'
-		provider: (extensionList := self instantiate: WidgetClassList)
+		provider: (extensionList := self instantiate: ClassMethodModuleBrowser)
