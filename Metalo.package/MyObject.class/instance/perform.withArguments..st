@@ -1,5 +1,5 @@
 message performing
-perform: aSymbol
+perform: aSymbol withArguments: anArray
 	
 	| environment method |
 	environment := thisContext sender receiver class environment.
@@ -8,5 +8,5 @@ perform: aSymbol
 		forClass: self class
 		withEnv: environment.
 	method
-		ifNotNil: [ method valueWithReceiver: self arguments: (Array new: 0) ]
+		ifNotNil: [ method valueWithReceiver: self arguments: anArray ]
 		ifNil: [ self error: 'DNU ' , aSymbol ]
