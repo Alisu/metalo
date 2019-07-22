@@ -1,6 +1,14 @@
 as yet unclassified
 lookupSelector: aSymbol forClass: aClass withEnv: anEnv
 	| lookupClass |
+	"1st normal lookup"
+	lookupClass := aClass.
+	[ lookupClass isNil ]
+		whileFalse:
+			[ lookupClass methodDict at: aSymbol ifPresent: [ :method | ^ method ].
+			lookupClass := lookupClass superclass ].
+
+	"2nd extension only lookup"
 	lookupClass := aClass.
 	[ lookupClass == nil ]
 		whileFalse: [ anEnv extensions
@@ -8,8 +16,6 @@ lookupSelector: aSymbol forClass: aClass withEnv: anEnv
 				ifPresent: [ :extensionClass | 
 					extensionClass methodDict
 						at: aSymbol
-						ifPresent: [ :method | ^ method ] ]
-				ifAbsent:
-					[ lookupClass methodDict at: aSymbol ifPresent: [ :method | ^ method ] ].
+						ifPresent: [ :method | ^ method ] ].
 			lookupClass := lookupClass superclass ].
 	^ nil

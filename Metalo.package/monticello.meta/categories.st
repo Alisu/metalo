@@ -4,8 +4,7 @@ SystemOrganization addCategory: #'Metalo-Compilation'!
 SystemOrganization addCategory: #'Metalo-Core'!
 SystemOrganization addCategory: #'Metalo-Core-OLD'!
 SystemOrganization addCategory: #'Metalo-Example'!
+SystemOrganization addCategory: #'Metalo-LookUpStrategies'!
 SystemOrganization addCategory: #'Metalo-Tests'!
 SystemOrganization addCategory: #'Metalo-Tests-Integration'!
 SystemOrganization addCategory: #'Metalo-Todo'!
-SystemOrganization addCategory: #'Metalo-Virtualization'!
-SystemOrganization addCategory: #'Metalo-Virtualization-test'!

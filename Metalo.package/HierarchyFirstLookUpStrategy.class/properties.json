@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "LookUpStrategy",
+	"category" : "Metalo-LookUpStrategies",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "HierarchyFirstLookUpStrategy",
+	"type" : "normal"
+}

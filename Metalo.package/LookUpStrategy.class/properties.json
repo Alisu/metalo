@@ -1,13 +1,11 @@
 {
-	"commentStamp" : "TheoRogliano 7/17/2019 14:28",
+	"commentStamp" : "",
 	"super" : "Object",
 	"category" : "Metalo-LookUpStrategies",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"lookupStrategy"
-	],
-	"name" : "MyObject",
+	"instvars" : [ ],
+	"name" : "LookUpStrategy",
 	"type" : "normal"
 }

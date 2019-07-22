@@ -1,8 +1,8 @@
 as yet unclassified
-extensionOverClassLookupSelector: aSymbol forClass: aClass withEnv: anEnv
-	| lookupClass |
+lookupSelector: aSymbol forClass: aClass withEnv: anEnv
+| lookupClass |
 	lookupClass := aClass.
-	[ lookupClass == nil ]
+	[ lookupClass isNil ]
 		whileFalse: [ anEnv extensions
 				at: lookupClass name
 				ifPresent: [ :extensionClass | 
