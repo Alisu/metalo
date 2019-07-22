@@ -1,0 +1,11 @@
+{
+	"commentStamp" : "",
+	"super" : "LookupStrategy",
+	"category" : "Metalo-LookupStrategies",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [ ],
+	"name" : "ExtensionOverClassLookupStrategy",
+	"type" : "normal"
+}

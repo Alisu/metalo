@@ -1,0 +1,3 @@
+initialization
+initialize
+	lookupStrategy := ExtensionOverClassLookupStrategy new
