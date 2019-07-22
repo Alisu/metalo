@@ -3,8 +3,8 @@ lookupSelector: aSymbol forClass: aClass withEnv: anEnv
 | lookupClass |
 	lookupClass := aClass.
 	[ lookupClass isNil ]
-		whileFalse: [ anEnv extensions
-				at: lookupClass name
+		whileFalse: [ 
+			anEnv findExtensionFor: lookupClass
 				ifPresent: [ :extensionClass | 
 					extensionClass methodDict
 						at: aSymbol
