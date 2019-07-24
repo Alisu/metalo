@@ -4,7 +4,7 @@ importExtension: aBehaviorName from: aModuleName
 	| import |
 	import := MLImport name: aBehaviorName from: aModuleName as: aBehaviorName receiver: self.
 	import checkRedundancyOn: self ifRedundant: [ :existingImport | ^ existingImport ].
-	import checkConflictsOn: self.
+	"import checkConflictsOn: self."
 	
 	"self declareBinding: import binding atName: import aliasName."
 	

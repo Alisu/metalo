@@ -8,6 +8,6 @@
 	"instvars" : [
 		"definedClassToExtend"
 	],
-	"name" : "MLExtensionMethodsWithDifferentObjects",
+	"name" : "MLExtensionMethods",
 	"type" : "normal"
 }

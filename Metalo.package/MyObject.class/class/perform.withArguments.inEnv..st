@@ -7,5 +7,5 @@ perform: aSymbol withArguments: anArray inEnv: anEnv
 		forClass: self class
 		withEnv: anEnv.
 	method
-		ifNotNil: [ method valueWithReceiver: self arguments: anArray ]
+		ifNotNil: [ ^method valueWithReceiver: self arguments: anArray ]
 		ifNil: [ self error: 'DNU ' , aSymbol ]

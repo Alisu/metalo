@@ -6,9 +6,9 @@ configureCallingMethod: aModule
 	aModule bindTo: MLModuleRegistry global.
 	class := aModule declareClass: self classCallingExtend.
 	aModule compileMethod: 'initialize receiverObject:=ClassToExtend new' inClass: class.
-	aModule compileMethod: 'foo receiverObject perform: #bar' inClass: class.
-	aModule compileMethod: 'fooWithArgs receiverObject perform: #bar: withArguments: {1} ' inClass: class.
-	module2 compileMethod: 'pouet receiverObject class perform: #bar' inClass: class.
+	aModule compileMethod: 'foo receiverObject bar' inClass: class.
+	aModule compileMethod: 'fooWithArgs receiverObject bar:1 ' inClass: class.
+
 	
 
 
