@@ -5,11 +5,15 @@ configureCallingMethod: aModule
 	aModule declareImport: #MyObject from: #Kernel.
 	aModule bindTo: MLModuleRegistry global.
 	class := aModule declareClass: self classCallingExtend.
-	aModule compileMethod: 'initialize receiverObject:=ClassToExtend new' inClass: class.
-	aModule compileMethod: 'foo receiverObject perform: #bar' inClass: class.
-	aModule compileMethod: 'pouet receiverObject class perform: #bar' inClass: class.
-	
-
-
-	
-	
+	aModule
+		compileMethod: 'initialize receiverObject:=ClassToExtend new'
+		inClass: class.
+	aModule
+		compileMethod: 'foo receiverObject perform: #bar'
+		inClass: class.
+	aModule
+		compileMethod: 'pouet receiverObject class perform: #bar'
+		inClass: class.
+	aModule
+		compileMethod: 'fooWithArgs receiverObject perform: #bar withArguments: {1} '
+		inClass: class

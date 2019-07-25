@@ -1,5 +1,5 @@
 as yet unclassified
-createExtensionMethod: aSymbol withSource: aSourceCode forClassNamed: aClassName 
+createExtensionMethod: aSymbol withSource: aSourceCode forClassNamed: aClassName isMeta: aTrue 
 	
 	| extension method selector |
 	extension := self extensions
