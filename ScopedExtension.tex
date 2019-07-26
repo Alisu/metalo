@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\usepackage{amsmath}
+\usepackage{titling}
+\usepackage{graphicx}
+
+\title{}
+\author{
+Theo Rogliano
+} 
+
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+
+\title  {Around scoped method extension}
+
+\author  {Théo ROGLIANO}
+
+
+
+
+\posttitle{\end{center}}
+
+\maketitle
+
+\newpage
+\section{Blah}
+
+This document is a reflexion and a list of the hardship we encountered in our journey to scoped method extension.
+
+What is an extension method ?
+An extension is a method that a developer adds to a class she does not own.
+They are globally visible.
+
+What is a scoped extension method ?
+The same except only a specific set of objects can ask for this method.
+
+Why do we need it ?
+See Camille Teruel works on this. For our part, we are developing a module system which ideally can handle all the features of Pharo including extension methods.
+Module implies encapsulation, and we want extension methods to be also encapsulated (=scoped).
+
+\end{document}
