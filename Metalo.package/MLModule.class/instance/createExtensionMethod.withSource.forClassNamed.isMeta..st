@@ -4,7 +4,7 @@ createExtensionMethod: aSymbol withSource: aSourceCode forClassNamed: aClassName
 	extension := self extensions
 		detect: [ :exten | exten extendedClassName = aClassName ]
 		ifNone: [ self addExtensionForClassNamed: aClassName ].
-	selector := Selector new: aSymbol inEnv: self.
+	selector := Selector new: aSymbol inEnv: self createdFrom: self.
 	method := self compiler
 		source: aSourceCode;
 		compile.
