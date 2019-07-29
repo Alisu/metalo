@@ -9,7 +9,7 @@ addExtensionForClassNamed: aClassName
 			^ ext ]
 		ifNone: [ | ext |
 			ext := MLExtension newInModule: self forClassNamed: aClassName.
-			self extensions at: ext extentedClassName put: ext.
+			self extensions at: ext extendedClassName put: ext.
 			(self hasImportAliasNamed: aClassName)
-				ifNil: [ self declareImport: aClassName ].
+				ifFalse: [ self declareImport: aClassName ].
 			^ ext ]

@@ -1,4 +1,5 @@
 accessing
 initialize
-	selectors:= Set new.
+	
+	extensionClassSideMethods:= Dictionary new.
 	extensionMethods:= Dictionary new.

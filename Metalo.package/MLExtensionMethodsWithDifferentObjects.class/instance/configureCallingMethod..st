@@ -9,11 +9,11 @@ configureCallingMethod: aModule
 		compileMethod: 'initialize receiverObject:=ClassToExtend new'
 		inClass: class.
 	aModule
-		compileMethod: 'foo receiverObject perform: #bar'
+		compileMethod: 'foo receiverObject bar'
 		inClass: class.
 	aModule
-		compileMethod: 'pouet receiverObject class perform: #bar'
+		compileMethod: 'pouet receiverObject class bar'
 		inClass: class.
 	aModule
-		compileMethod: 'fooWithArgs receiverObject perform: #bar withArguments: {1} '
+		compileMethod: 'fooWithArgs receiverObject bar: 1 '
 		inClass: class

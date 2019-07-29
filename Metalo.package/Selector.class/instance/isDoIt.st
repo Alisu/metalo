@@ -1,0 +1,4 @@
+matching
+isDoIt
+
+	^symbol isDoIt.

@@ -1,3 +1,3 @@
 accessing
-extentedClassName: anObject
+extendedClassName: anObject
 	extentedClassName := anObject

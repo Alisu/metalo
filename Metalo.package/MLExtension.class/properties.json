@@ -9,7 +9,7 @@
 		"module",
 		"extentedClassName",
 		"extensionMethods",
-		"selectors"
+		"extensionClassSideMethods"
 	],
 	"name" : "MLExtension",
 	"type" : "normal"

@@ -3,5 +3,5 @@ newInModule: aMLModule forClassNamed: aClassName
 	
 		^ self new
 		module: aMLModule;
-		extentedClassName: aClassName;
+		extendedClassName: aClassName;
 		yourself

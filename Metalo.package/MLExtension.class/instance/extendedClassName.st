@@ -1,3 +1,3 @@
 accessing
-extentedClassName
+extendedClassName
 	^ extentedClassName

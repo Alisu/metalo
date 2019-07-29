@@ -1,4 +1,6 @@
 accessing
 compiler
 	
-	^ OpalCompiler new
+	^ self class compiler
+		environment: self;
+		addPlugin: MyPlugin.
