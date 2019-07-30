@@ -1,4 +1,4 @@
 accessing
 initialize
 	
-	lookupStrategy:= ExtensionOverClassLookUpStrategy new.
+	lookupStrategy:= HierarchyFirstLookUpStrategy new.

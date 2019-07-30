@@ -6,11 +6,12 @@ lookupSelector: aSymbol forClass: aClass withEnv: anEnv
 		whileFalse: [ lookupClass methodDict
 				at: aSymbol
 				ifPresent: [ :method | ^ method ]
-				ifAbsent: [ anEnv extensions
-						at: lookupClass name
+				ifAbsent: [ anEnv
+						findExtensionFor: lookupClass
 						ifPresent: [ :extensionClass | 
 							extensionClass methodDict
 								at: aSymbol
-								ifPresent: [ :method | ^ method ] ] ].
+								ifPresent: [ :method | ^ method ] ]
+						ifAbsent: [  ] ].
 			lookupClass := lookupClass superclass ].
 	^ nil

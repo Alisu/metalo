@@ -1,14 +1,11 @@
 {
 	"commentStamp" : "",
-	"super" : "MLMultipleModuleTest",
+	"super" : "MLExtensionMethods",
 	"category" : "Metalo-Tests",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
-	"instvars" : [
-		"definedClassToExtend",
-		"lookupStrategy"
-	],
-	"name" : "MLExtensionMethods",
+	"instvars" : [ ],
+	"name" : "MLExtensionMethodsExtensionOverClass",
 	"type" : "normal"
 }

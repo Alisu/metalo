@@ -1,11 +1,6 @@
 running
 setUp
 
-	super setUp.
-	definedClassToExtend := module1 declareClassNamed: self classToExtendName subclassOfClassNamed: #MyObject.
-	
-	self configureCallingMethod: module1.
-	self configureExtendingModule: module2.
-	self configureExtendingModule: module3.
+	self setUp: 'ExtensionOverClass'.
 	
 	

@@ -11,11 +11,12 @@ lookupSelector: aSymbol forClass: aClass withEnv: anEnv
 	"2nd extension only lookup"
 	lookupClass := aClass.
 	[ lookupClass == nil ]
-		whileFalse: [ anEnv extensions
-				at: lookupClass name
+		whileFalse: [ anEnv
+				findExtensionFor: lookupClass
 				ifPresent: [ :extensionClass | 
 					extensionClass methodDict
 						at: aSymbol
-						ifPresent: [ :method | ^ method ] ].
+						ifPresent: [ :method | ^ method ] ]
+				ifAbsent:[].
 			lookupClass := lookupClass superclass ].
 	^ nil

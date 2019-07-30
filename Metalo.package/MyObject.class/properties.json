@@ -4,10 +4,10 @@
 	"category" : "Metalo-LookUpStrategies",
 	"classinstvars" : [ ],
 	"pools" : [ ],
-	"classvars" : [ ],
-	"instvars" : [
+	"classvars" : [
 		"lookupStrategy"
 	],
+	"instvars" : [ ],
 	"name" : "MyObject",
 	"type" : "normal"
 }
