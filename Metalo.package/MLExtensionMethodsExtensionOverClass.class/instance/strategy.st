@@ -1,0 +1,3 @@
+accessing
+strategy
+ ^ExtensionOverClassLookUpStrategy new.

@@ -1,6 +1,6 @@
 running
 setUp
 
-	self setUp: 'ExtensionOverClass'.
+	self setUp: ExtensionOverClassLookUpStrategy new .
 	
 	

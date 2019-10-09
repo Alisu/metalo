@@ -1,4 +1,4 @@
 running
 setUp
 
-	super setUp: 'HierarchyFirst'.
+	self setUp: self strategy.

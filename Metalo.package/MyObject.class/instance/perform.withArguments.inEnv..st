@@ -2,7 +2,7 @@ message performing
 perform: aSymbol withArguments: anArray inEnv: anEnv
 	
 	| method |
-	method := self lookupStrategy
+	method := lookupStrategy
 		lookupSelector: aSymbol
 		forClass: self class
 		withEnv: anEnv.

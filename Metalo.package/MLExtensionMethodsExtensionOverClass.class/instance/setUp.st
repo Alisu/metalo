@@ -1,4 +1,4 @@
 running
 setUp
 
-	super setUp: 'ExtensionOverClass'.
+	self setUp: self strategy.

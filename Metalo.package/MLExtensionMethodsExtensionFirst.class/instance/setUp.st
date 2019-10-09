@@ -1,6 +1,6 @@
 running
 setUp
 
-	self setUp: self strategyName.
+	self setUp: self strategy.
 	
 	

@@ -3,7 +3,7 @@ perform: aSymbol withArguments: anArray inEnv: anEnv
 	
 	
 	| method |
-	method := ExtensionFirstLookUpStrategy new
+	method := lookupStrategy
 		lookupSelector: aSymbol
 		forClass: self class
 		withEnv: anEnv.
